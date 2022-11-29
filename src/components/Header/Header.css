@@ -1,0 +1,22 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.header__title {
+  font-family: 'Baloo Tamma', cursive;
+  letter-spacing: 5px;
+  color: #ffbbff;
+  font-size: 40px;
+  margin: 0;
+  text-shadow: -1px -1px 0px #5d478b, 3px 3px 0px #5d478b, 6px 6px 0px #362853;
+}
+
+@media (max-width: 765px) {
+  .header {
+  }
+}

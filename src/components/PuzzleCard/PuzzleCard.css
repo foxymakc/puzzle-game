@@ -1,0 +1,51 @@
+.puzzle-card {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.puzzle-card__blind {
+  position: absolute;
+  background-color: #ab82ff;
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  border-radius: 32px;
+  box-shadow: 1.5px 1.5px 0 1.5px #775ab3, -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+    28px 28px 28px 0 rgba(19, 19, 46, 0.418);
+  transition: 0.4s ease-in-out transform, 0.4s ease-in-out box-shadow;
+  cursor: pointer;
+}
+
+.puzzle-card__blind_open {
+  display: none;
+}
+
+.puzzle-card__blind:hover {
+  transform: translate3d(0px, -16px, 0px);
+  box-shadow: 1.5px 1.5px 0 1.5px #775ab3, -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+    54px 54px 28px -10px rgba(19, 19, 46, 0.418);
+}
+
+.puzzle-card__blind:focus {
+  background-color: inherit;
+}
+
+.puzzle-card__text {
+  color: #ffbbff;
+  font-size: 6rem;
+  font-weight: bold;
+  margin: 0;
+
+  text-shadow: 1px 1px 0 #775ab3, 2px 2px 0 #775ab3, 3px 3px 0 #775ab3,
+    4px 4px 0 #775ab3, 4px 4px 0 rgb(37, 37, 37), 0px 1px 1px rgba(0, 0, 0, 0.4),
+    0px 2px 2px rgba(0, 0, 0, 0.3), 1px 3px 3px rgba(0, 0, 0, 0.2),
+    1px 5px 5px rgba(0, 0, 0, 0.1), 2px 8px 8px rgba(0, 0, 0, 0.1),
+    2px 13px 13px rgba(0, 0, 0, 0.1);
+}

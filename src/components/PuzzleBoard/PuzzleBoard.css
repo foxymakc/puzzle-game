@@ -1,0 +1,13 @@
+.puzzle-board {
+  width: 800px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(4, 19%);
+  grid-template-rows: repeat(4, 1fr);
+  row-gap: 40px;
+  column-gap: 40px;
+  margin: 10px auto;
+}
+
+

@@ -1,0 +1,109 @@
+.not-found {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 246px 0 60px;
+  margin: auto;
+}
+
+.not-found__title {
+  font-family: "Inter", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 140px;
+  line-height: 169px;
+  text-align: center;
+  color: rgba(58, 28, 28, 0.85);
+  margin: 0;
+  position:relative;
+  left:0;
+  text-shadow:
+    1px 1px 0px #e2c4c4,
+    2px 2px 0px #d9b4b4,
+    3px 3px 0px #cfa6a6,
+    4px 4px 0px #c39494,
+    5px 5px 0px #b98787,
+    6px 6px 0px #af7a7a,
+    7px 7px 0px #a36d6d,
+    8px 8px 0px #986161,
+    9px 9px 0px #8e5656,
+    10px 10px 0px #834c4c,
+    15px 15px 25px rgba(0,0,0,.9);
+  	transition: .5s ease-in-out;
+}
+
+.not-found__title:hover {
+	left:20px;
+  text-shadow:
+    -1px 1px 0px #e2c4c4,
+    -2px 2px 0px #d9b4b4,
+    -3px 3px 0px #cfa6a6,
+    -4px 4px 0px #c39494,
+    -5px 5px 0px #b98787,
+    -6px 6px 0px #af7a7a,
+    -7px 7px 0px #a36d6d,
+    -8px 8px 0px #986161,
+    -9px 9px 0px #8e5656,
+    -10px 10px 0px #834c4c,
+    -15px 15px 25px rgba(0,0,0,.9);
+}
+
+.not-found__subtitle {
+  font-family: "Inter", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: rgba(58, 28, 28, 0.85);
+  margin: 5px auto 184px;
+}
+
+.not-found__link {
+  text-decoration: none;
+  font-family: "Inter", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: rgba(58, 28, 28, 0.85);
+}
+
+.not-found__link:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 770px) {
+  .not-found {
+    padding-top: 408px;
+    padding-bottom: 222px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .not-found {
+    padding-top: 329px;
+    padding-bottom: 30px;
+  }
+
+  .not-found__title {
+    font-size: 80px;
+    line-height: 97px;
+  }
+
+  .not-found__subtitle {
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 10px;
+    margin-bottom: 284px;
+  }
+
+  .not-found__link {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
