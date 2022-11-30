@@ -3,9 +3,12 @@ import "./Main.css";
 import Popup from "../Popup/Popup";
 import PuzzleBoard from "../PuzzleBoard/PuzzleBoard";
 
-function Main() {
+function Main(props) {
   const [startPopupOpen, setStartPopupOpen] = useState(true);
   const [finishPopupOpen, setFinishtPopupOpen] = useState(false);
+  const [step, setStep] = useState(0);
+  const counterStep = document.querySelectorAll(".counter__text")[1];
+  let number = 0;
 
   function handleClickPlay() {
     setStartPopupOpen(false);
@@ -13,11 +16,20 @@ function Main() {
 
   function gameOverPopupOpen() {
     setFinishtPopupOpen(true);
+    setStep(number)
   }
 
   function handleClickPlaySomeMore() {
     setFinishtPopupOpen(false);
+    counterStep.innerText = 0;
+    setStep(0)
   }
+
+  function makeStep(){
+    number++
+    counterStep.innerText = number
+  }
+  
 
   return (
     <main className="main">
@@ -34,10 +46,10 @@ function Main() {
         isOpen={finishPopupOpen}
         onClickBtnPopup={handleClickPlaySomeMore}
         title={"Ура! Вы прошли!"}
-        text={"Время прохождения"}
+        text={`Количество шагов: ${step}`}
         btnText={"Играть ещё"}
       />
-      <PuzzleBoard gameOverPopupOpen={gameOverPopupOpen} />
+      <PuzzleBoard gameOverPopupOpen={gameOverPopupOpen} clickPuzzle={props.clickPuzzle} makeStep={makeStep}/>
     </main>
   );
 }

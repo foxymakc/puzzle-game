@@ -18,7 +18,7 @@ function App() {
           element={
             <>
               <Header />
-              <Main/>
+              <Main />
               <Footer />
             </>
           }

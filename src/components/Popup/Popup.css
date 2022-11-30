@@ -8,13 +8,13 @@
   width: 100%;
   height: 100%;
   z-index: 1;
-  visibility:visible;
-  opacity:1;
+  visibility: visible;
+  opacity: 1;
 }
 
 .popup_closed {
-  visibility:hidden;
-  opacity:0;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .popup__container {

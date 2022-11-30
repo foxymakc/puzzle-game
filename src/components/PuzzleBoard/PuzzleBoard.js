@@ -12,6 +12,8 @@ function PuzzleBoard(props) {
     ".puzzle-card__blind"
   );
 
+
+
   function mixArrStart(arr) {
     return arr
       .map((i) => [Math.random(), i])
@@ -22,6 +24,7 @@ function PuzzleBoard(props) {
   function compareNumder(e) {
     e.target.classList.add("puzzle-card__blind_open");
     const number = e.target.parentElement.innerText;
+    props.makeStep();
     if (
       arrNumdersToCompare.length % 2 === 0 ||
       arrNumdersToCompare.length === 0
