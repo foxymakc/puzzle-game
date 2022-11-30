@@ -5,12 +5,11 @@ function Popup(props) {
   return (
     <div className={`popup ${props.isOpen ? "" : "popup_closed"}`}>
       <div className="popup__container">
-        <h3 className="popup__title">Правила игры.</h3>
-        <p className="popup__text">
-          Под пазлами спрятаны пары чисел от 1 до 8, ваша задача найти их как
-          можно быстрее. Удачи!
-        </p>
-        <button className="popup__btn" onClick={props.onClickStartPopup}>Начать</button>
+        <h3 className="popup__title">{props.title}</h3>
+        <p className="popup__text">{props.text}</p>
+        <button className="popup__btn" onClick={props.onClickBtnPopup}>
+          {props.btnText}
+        </button>
       </div>
     </div>
   );
