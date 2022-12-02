@@ -55,6 +55,7 @@ button {
 }
 
 .popup__btn {
+  width: 30%;
   font-family: "Baloo Tamma", cursive;
   font-weight: bold;
   color: #362853;
@@ -103,4 +104,15 @@ button {
 .popup__btn:active::before {
   box-shadow: 0 0 0 2px #362853, 0 0 #ffe3e2;
   transform: translate3d(0, 0, -1em);
+}
+
+@media (max-width: 510px) {
+  .popup__container {
+    box-sizing: border-box;
+    width: 300px;
+  }
+
+  .popup__btn {
+    width: 40%;
+  }
 }

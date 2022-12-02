@@ -12,8 +12,6 @@ function PuzzleBoard(props) {
     ".puzzle-card__blind"
   );
 
-
-
   function mixArrStart(arr) {
     return arr
       .map((i) => [Math.random(), i])
@@ -46,7 +44,7 @@ function PuzzleBoard(props) {
   function closeCardsNotInArr(arr) {
     numbersAllCardsOnPage.forEach((element) => {
       if (arr.includes(element.parentElement.innerText)) {
-        //если карточки одинаковые добавить какой-нибудь эфект 
+        //если карточки одинаковые добавить какой-нибудь эфект
       } else {
         element.classList.remove("puzzle-card__blind_open");
       }
@@ -54,10 +52,15 @@ function PuzzleBoard(props) {
   }
 
   function finish(arr) {
-    if (arr.length === startNumbersListOne.length + startNumbersListTwo.length) {
+    if (
+      arr.length ===
+      startNumbersListOne.length + startNumbersListTwo.length
+    ) {
       props.gameOverPopupOpen();
-      numbersAllCardsOnPage.forEach((element) => {element.classList.remove("puzzle-card__blind_open")})
-      arr.splice(0,16)
+      numbersAllCardsOnPage.forEach((element) => {
+        element.classList.remove("puzzle-card__blind_open");
+      });
+      arr.splice(0, 16);
     }
   }
 

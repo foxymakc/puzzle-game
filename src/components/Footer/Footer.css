@@ -1,18 +1,24 @@
 .footer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .footer__copyright {
-    color: #362853;
-    margin: 0;
-    font-family: 'Baloo Tamma', cursive;
+  color: #362853;
+  margin: 0;
+  font-family: "Baloo Tamma", cursive;
 }
 
 .footer__link {
-    text-decoration: none;
+  text-decoration: none;
+}
+
+@media (max-width: 510px) {
+  .footer {
+    margin-top: 50px;
+  }
 }

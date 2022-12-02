@@ -1,17 +1,29 @@
 .counter {
-    display: flex;
-    background-color: #362853;
-    border-radius: 15px;
-    width: 150px;
-    align-items: center;
-    justify-content: center;
-    padding: 4px 0;
+  display: flex;
+  background-color: #362853;
+  border-radius: 15px;
+  width: 150px;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 0;
 }
 
 .counter__text {
-    font-size: 25px;
-    font-family: "Baloo Tamma", cursive;
-    color: #ffbbff;
-    text-shadow: -1px -1px 0px #5d478b, 3px 3px 0px #5d478b, 6px 6px 0px #362853;
-    margin: 0;
+  font-size: 25px;
+  font-family: "Baloo Tamma", cursive;
+  color: #ffbbff;
+  text-shadow: -1px -1px 0px #5d478b, 3px 3px 0px #5d478b, 6px 6px 0px #362853;
+  margin: 0;
+}
+
+@media (max-width: 800px) {
+  .counter {
+    width: 100px;
+    border-radius: 12px;
+    padding: 5px 0;
+  }
+
+  .counter__text {
+    font-size: 18px;
+  }
 }
