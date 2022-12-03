@@ -40,6 +40,7 @@
   font-size: 6rem;
   font-weight: bold;
   margin: 0;
+  user-select: none;
   text-shadow: 1px 1px 0 #775ab3, 2px 2px 0 #775ab3, 3px 3px 0 #775ab3,
     4px 4px 0 #775ab3, 4px 4px 0 rgb(37, 37, 37), 0px 1px 1px rgba(0, 0, 0, 0.4),
     0px 2px 2px rgba(0, 0, 0, 0.3), 1px 3px 3px rgba(0, 0, 0, 0.2),
