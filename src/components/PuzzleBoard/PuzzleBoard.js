@@ -3,14 +3,28 @@ import "./PuzzleBoard.css";
 import PuzzleCard from "../PuzzleCard/PuzzleCard";
 
 function PuzzleBoard(props) {
-  const startNumbersListOne = [1, 2, 3, 4, 5, 6, 7, 8];
-  const startNumbersListTwo = [1, 2, 3, 4, 5, 6, 7, 8];
-  let arrNumdersToCompare = [];
-  let mixArrOne = mixArrStart(startNumbersListOne);
-  let mixArrTwo = mixArrStart(startNumbersListTwo);
   const numbersAllCardsOnPage = document.querySelectorAll(
     ".puzzle-card__blind"
   );
+  let arrNumdersToCompare = [];
+  const startNumbersList = [
+    { number: 1, id: 1 },
+    { number: 2, id: 2 },
+    { number: 3, id: 3 },
+    { number: 4, id: 4 },
+    { number: 5, id: 5 },
+    { number: 6, id: 6 },
+    { number: 7, id: 7 },
+    { number: 8, id: 8 },
+    { number: 1, id: 9 },
+    { number: 2, id: 10 },
+    { number: 3, id: 11 },
+    { number: 4, id: 12 },
+    { number: 5, id: 13 },
+    { number: 6, id: 14 },
+    { number: 7, id: 15 },
+    { number: 8, id: 16 },
+  ];
 
   function mixArrStart(arr) {
     return arr
@@ -52,10 +66,7 @@ function PuzzleBoard(props) {
   }
 
   function finish(arr) {
-    if (
-      arr.length ===
-      startNumbersListOne.length + startNumbersListTwo.length
-    ) {
+    if (arr.length === startNumbersList.length) {
       props.gameOverPopupOpen();
       numbersAllCardsOnPage.forEach((element) => {
         element.classList.remove("puzzle-card__blind_open");
@@ -66,17 +77,10 @@ function PuzzleBoard(props) {
 
   return (
     <div className="puzzle-board">
-      {mixArrOne.map((numbersOne) => (
+      {mixArrStart(startNumbersList).map((numbersStart) => (
         <PuzzleCard
-          key={numbersOne}
-          card={numbersOne}
-          compareNumder={compareNumder}
-        />
-      ))}
-      {mixArrTwo.map((numberTwo) => (
-        <PuzzleCard
-          key={numberTwo}
-          card={numberTwo}
+          key={numbersStart.id}
+          card={numbersStart.number}
           compareNumder={compareNumder}
         />
       ))}
